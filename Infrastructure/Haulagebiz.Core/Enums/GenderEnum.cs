@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Haulagebiz.Core.Entities
+namespace Haulagebiz.Core.Enums
 {
-	public class Vehicle : DatedEntity<Guid>
+	public enum GenderEnum
 	{
-		public string PlateNumber { get; set; }
+		Male = 0,
+		Female = 1
 	}
 }

@@ -1,39 +1,147 @@
-﻿<header class="site-navbar py-3" role="banner">
-
-    <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-11 col-xl-2">
-                <h1 class="mb-0"><a href="/" class="text-white h2 mb-0">Haulagebiz</a></h1>
-            </div>
-            <div class="col-12 col-md-10 d-none d-xl-block">
-                <nav class="site-navigation position-relative text-right" role="navigation">
-
-                    <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                        <li class="active"><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a asp-controller="About" asp-action="Index">About Us</a></li>
-                        @*<li class="has-children">
-                            <a href="services.html">Services</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Air Freight</a></li>
-                                <li><a href="#">Ocean Freight</a></li>
-                                <li><a href="#">Ground Shipping</a></li>
-                                <li><a href="#">Warehousing</a></li>
-                                <li><a href="#">Storage</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="industries.html">Industries</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>*@
+﻿<header class="header-style3">
+    <div class="bg-primary py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-xs-12">
+                    <ul class="list-style2 mb-0">
+                        <li class="text-white display-30"><i class="fas fa-mobile-alt mr-2"></i>+1 234 567 890</li>
+                        <li class="text-white display-30"><i class="fas fa-envelope mr-2"></i>info@haulagebiz.com</li>
                     </ul>
-                </nav>
+                </div>
+                <div class="col-xs-12 col-md-3 d-none d-md-block text-right">
+                    <ul class="list-style2 mb-0">
+                        <li><a href="#!" class="text-white"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#!" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#!" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#!" class="text-white"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
             </div>
-
-
-            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-
         </div>
+    </div>
 
+    <div class="navbar-default">
+
+        <!-- start top search -->
+        <div class="top-search bg-dark">
+            <div class="container">
+                <form class="search-form" action="search.html" method="GET" accept-charset="utf-8">
+                    <div class="input-group">
+                        <span class="input-group-addon cursor-pointer">
+                            <button class="search-form_submit fas fa-search text-white" type="submit"></button>
+                        </span>
+                        <input type="text" class="search-form_input form-control" name="s" autocomplete="off" placeholder="Type & hit enter...">
+                        <span class="input-group-addon close-search mt-1"><i class="fas fa-times"></i></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end top search -->
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-12">
+                    <div class="menu_area alt-font">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+
+                            <div class="navbar-header navbar-header-custom">
+                                <!-- start logo -->
+                                <a href="index.html" class="navbar-brand logodefault"><img id="logo" src="img/logos/logo.png" alt="logo"></a>
+                                <!-- end logo -->
+                            </div>
+
+                            <div class="navbar-toggler"></div>
+
+                            <!-- menu area -->
+                            <ul class="navbar-nav ml-auto" id="nav" style="display: none;">
+                                <li>
+                                    <a href="#!">Home</a>
+                                    <ul>
+                                        <li><a href="index-agency.html">Agency</a></li>
+                                        <li><a href="index-business.html">Business</a></li>
+                                        <li><a href="index-corporate.html">Corporate</a></li>
+                                        <li><a href="index-startup.html">Startup</a></li>
+                                        <li><a href="index-portfolio.html">Portfolio</a></li>
+                                        <li><a href="index-software.html">Software</a></li>
+                                        <li><a href="index-web-agency.html">Web Agency</a></li>
+                                        <li><a href="index-job-board.html">Job Board</a></li>
+                                        <li><a href="index-agency-banner.html">Agency Banner</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#!">Pages</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#!">About Us</a>
+                                            <ul>
+                                                <li><a href="about.html">About Us 01</a></li>
+                                                <li><a href="about-2.html">About Us 02</a></li>
+                                                <li><a href="about-3.html">About Us 03</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Account</a>
+                                            <ul>
+                                                <li><a href="login.html">Login 01</a></li>
+                                                <li><a href="login-cover.html">Login 02</a></li>
+                                                <li><a href="register.html">Register 01</a></li>
+                                                <li><a href="register-cover.html">Register 02</a></li>
+                                                <li><a href="forgot-password.html">Forgot Password 01</a></li>
+                                                <li><a href="forgot-password-cover.html">Forgot Password 02</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="team.html">Our Team</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#!">Services</a>
+                                    <ul>
+                                        <li><a href="services.html">Services 01</a></li>
+                                        <li><a href="services-2.html">Services 02</a></li>
+                                        <li><a href="services-3.html">Services 03</a></li>
+                                        <li><a href="service-details.html">Service Details</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#!">Portfolio</a>
+                                    <ul>
+                                        <li><a href="portfolio.html">Portfolio 01</a></li>
+                                        <li><a href="portfolio-2.html">Portfolio 02</a></li>
+                                        <li><a href="portfolio-3.html">Portfolio 03</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#!">Blog</a>
+                                    <ul>
+                                        <li><a href="blog-grid.html">Blog Grid</a></li>
+                                        <li><a href="blog-grid-classic.html">Blog Classic</a></li>
+                                        <li><a href="blog-grid-sidebar.html">Blog Sidebar</a></li>
+                                        <li><a href="blog-post.html">Blog Post</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#!">Contact</a>
+                                    <ul>
+                                        <li><a href="contact.html">Contact 01</a></li>
+                                        <li><a href="contact-2.html">Contact 02</a></li>
+                                        <li><a href="contact-3.html">Contact 03</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- end menu area -->
+                            <!-- start attribute navigation -->
+                            <div class="attr-nav">
+                                <ul>
+                                    <li class="search"><a href="#!"><i class="fas fa-search"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- end attribute navigation -->
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </header>

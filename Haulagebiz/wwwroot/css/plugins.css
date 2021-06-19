@@ -1,0 +1,43 @@
+/*-----------------------------------------------------------------------------------
+
+    Theme Name: Alicon - Multi Purpose HTML5 Template
+    Description: Multi Purpose HTML5 Template
+    Author: Website Design Templates
+    Version: 1.3
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+			[ All CSS Plugins & Default Classes File ]
+-----------------------------------------------------------------*/
+
+/* == bootstrap == */
+@import url("plugins/bootstrap.min.css");
+
+/* == animate css == */
+@import url("plugins/animate.css");
+
+/* == animated headline css == */
+@import url("plugins/animated-headline.css");
+
+/* == font awesome css == */
+@import url("plugins/fontawesome-all.min.css");
+
+/* == et line css == */
+@import url("plugins/et-line.css");
+
+/* == themify icon font == */
+@import url("plugins/themify-icons.css");
+
+/* == magnific-popup == */
+@import url("plugins/magnific-popup.css");
+
+/* == owl.carousel == */
+@import url("plugins/owl.carousel.css");
+@import url("plugins/owl.theme.default.css");
+
+/* == default classes == */
+@import url("plugins/default.css");
+
+/* == navigation == */
+@import url("plugins/nav-menu.css");

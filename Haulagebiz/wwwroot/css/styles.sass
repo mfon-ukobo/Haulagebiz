@@ -1,0 +1,2717 @@
+/*-----------------------------------------------------------------------------------
+ *
+ * Theme Name: Alicon - Multi Purpose HTML5 Template
+ * Description: Multi Purpose HTML5 Template
+ * Author: Website Design Templates
+ * Version: 1.3
+ *
+ * ----------------------------------------------------------------------------------- */
+/* ----------------------------------
+ *
+ * Table of contents
+ *
+ * 01. Common styles
+ * 02. Section titles
+ * 03. Navigation
+ * 04. Main Banner
+ * 05. Cards
+ * 06. Portfolio
+ * 07. Video
+ * 08. OwlCarousel
+ * 09. Testmonials
+ * 10. Team styles
+ * 11. Others
+ * 12. Blog styles
+ * 13. Contact info
+ * 14. Footer
+ *
+ * ---------------------------------- */
+  
+$PrimaryColor: #73c12c
+$PrimaryRgbColor: rgb(115, 193, 44)
+
+$desk-xl-screen: 1399px
+$desk-md-screen: 1199px
+$desk-sm-screen: 992px
+$desk-xs-screen: 991px
+$tablet-xs-screen: 767px
+$mobile-sm-screen: 575px
+$mobile-xs-screen: 479px
+
+/*==============================
+ *    Common styles
+ *    ================================ */
+
+/* loader */
+#preloader
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 99999
+  width: 100%
+  height: 100%
+  overflow: visible
+  background: #fff
+  display: table
+  text-align: center
+
+.loader
+  display: table-cell
+  vertical-align: middle
+  position: relative
+  width: 200px
+  height: 200px
+
+.loader-icon
+  width: 80px
+  height: 80px
+  border: 5px solid $PrimaryColor
+  border-right-color: #eee
+  border-radius: 50%
+  position: relative
+  animation: loader-rotate 1s linear infinite
+  margin: 0 auto
+
+@keyframes loader-rotate
+  0%
+    transform: rotate(0)
+
+  100%
+    transform: rotate(360deg)
+
+/* theme color and basic options */
+a
+  &:hover, &:active
+    color: $PrimaryColor
+    text-decoration: none
+
+.text-white-hover
+  &:hover, &:active, &:focus
+    color: rgba(255, 255, 255, 0.65) !important
+
+.bg-primary
+  background-color: $PrimaryColor !important
+
+.bg-primary-90
+  background: rgba($PrimaryRgbColor, 0.9)
+
+.bg-primary-80
+  background: rgba($PrimaryRgbColor, 0.8)
+
+.bg-two-color
+  background-image: linear-gradient(to bottom, #f8f9fa 0%, #f8f9fa 50%, #f8f9fa 50%, white 50%, white 100%)
+
+.bg-two-color-60
+  background-image: linear-gradient(to bottom, #f8f9fa 0%, #f8f9fa 60%, #f8f9fa 60%, white 60%, white 100%)
+
+.theme-overlay[data-overlay-dark]:before
+  background: $PrimaryColor
+
+.left-overlay[data-overlay-dark]:before
+  background: rgba(0, 0, 0, 0.76)
+  background: linear-gradient(-90deg, transparent, #000 65%)
+
+a.text-primary
+  &:active, &:focus, &:hover
+    color: $PrimaryColor !important
+
+.text-primary
+  color: $PrimaryColor !important
+
+.text-white-90
+  color: rgba(255, 255, 255, 0.9)
+
+.text-white-80
+  color: rgba(255, 255, 255, 0.8)
+
+.text-white-70
+  color: rgba(255, 255, 255, 0.7)
+
+.text-white-60
+  color: rgba(255, 255, 255, 0.6)
+
+.text-white-50
+  color: rgba(255, 255, 255, 0.5)
+
+.primary-hover:hover
+  color: $PrimaryColor
+
+.white-hover:hover
+  color: #ffffff
+
+.line-height-normal
+  line-height: normal
+
+.text-highlight
+  padding: 0
+  background-image: linear-gradient(45deg, rgba(255, 221, 101, 0.98) 0, rgba(255, 221, 101, 1) 100%)
+  background-repeat: no-repeat
+  background-position: 0 80%
+  position: relative
+  animation-delay: 1s
+  background-size: 100% .3em
+
+.line-title
+  text-transform: uppercase
+  letter-spacing: 3px
+  position: relative
+  color: $PrimaryColor
+  font-size: 13px
+  font-weight: 600
+  display: block
+  margin-bottom: 8px
+
+  &:before
+    content: ''
+    width: 30px
+    height: 1px
+    background: $PrimaryColor
+    display: inline-block
+    vertical-align: middle
+    margin-right: 10px
+
+.line-through
+  text-decoration: line-through
+
+.clearfix
+  clear: both
+
+.sm-avatar
+  width: 2.75rem
+  height: 2.75rem
+
+.md-avatar
+  width: 3.75rem
+  height: 3.75rem
+
+.min-height-300
+  min-height: 300px
+
+.text-white a
+  color: #fff    
+
+.hover-style1
+  transition: all .3s ease-in-out
+
+  &:hover
+    transform: translate(0, -10px)
+
+.shadow-block
+  box-shadow: 0px 10px 30px 0px rgba(17, 12, 79, 0.1)
+  background-color: #fff
+  border-left: 3px solid $PrimaryColor
+
+/* scroll to top */
+.scroll-to-top
+  font-size: 20px
+  text-align: center
+  color: #fff
+  text-decoration: none
+  position: fixed
+  bottom: 20px
+  right: 20px
+  display: none
+  border-radius: 50%
+  background: #000
+  border: 1px solid #2a2a2a
+  width: 35px
+  height: 35px
+  line-height: 30px
+  z-index: 9999
+  outline: 0
+  -webkit-transition: all .3s ease
+  -moz-transition: all .3s ease
+  -o-transition: all .3s ease
+  -ms-transition: all .3s ease
+
+  i
+    color: #fff
+    margin-top: -3px
+    display: inline-block
+    vertical-align: middle
+
+  &:hover
+    color: #1e2022
+    background: #fff
+
+    i
+      color: #1e2022
+
+  &:visited
+    color: #1e2022
+    text-decoration: none
+
+/* list style1 */
+.list-style1
+  list-style: none
+  padding: 0
+
+  li
+    position: relative
+    padding: 0 0 0 40px
+    margin: 0 0 14px 0
+
+    span
+      position: absolute
+      top: 3px
+      right: 0
+
+    &:last-child
+      margin-bottom: 0
+
+    &:before
+      content: "\e64c"
+      font-family: 'themify'
+      color: $PrimaryColor
+      font-size: 12px
+      background: rgba($PrimaryRgbColor, 0.1)
+      margin-right: 12px
+      border-radius: 30px
+      padding: 6px
+      position: absolute
+      left: 0
+      top: 2px
+      line-height: 12px
+
+    i
+      color: $PrimaryColor
+      font-size: 12px
+      background: rgba($PrimaryRgbColor, 0.1)
+      margin-right: 12px
+      border-radius: 30px
+      padding: 6px
+      position: absolute
+      left: 0
+      top: 2px
+      line-height: 12px
+
+/* liststyle 2 */
+.list-style2
+  list-style: none
+
+  li
+    display: inline-block
+    margin-right: 15px
+
+    &:last-child
+      margin-right: 0
+
+    a
+      color: rgba(255, 255, 255, 0.8)
+
+      &:hover
+        color: white
+
+  &.dark li a
+    color: #575a7b
+
+    &:hover
+      color: $PrimaryColor
+
+/* liststyle 3 */
+.list-style3
+  list-style: none
+
+  li
+    margin-bottom: 8px
+
+    &:last-child
+      margin-bottom: 0
+
+/* liststyle 4 */
+.list-style4
+  list-style: none
+  padding: 0
+
+  li
+    margin-bottom: 8px
+
+    &:last-child
+      margin-bottom: 0
+
+    &:before
+      content: "\e64c"
+      font-family: 'themify'
+      margin-right: 10px
+      color: $PrimaryColor
+      font-size: 12px
+
+/* liststyle 5 */
+.list-style5
+  padding: 0
+  margin: 0
+  list-style: none
+
+  li
+    list-style-type: none
+    padding: 0.5rem 0 0.5rem 0
+    font-size: 15px
+
+    &:first-child
+      padding-top: 0
+
+    &:last-child
+      padding-bottom: 0
+
+/* liststyle 6 */
+.list-style6
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  li
+    border-bottom: 1px solid #ececec
+
+    &:last-child
+      border-bottom: none
+
+    &.active a
+      border-left-color: $PrimaryColor
+      color: $PrimaryColor
+
+    a
+      display: block
+      border-left: 4px solid transparent
+      font-size: 15px
+      font-weight: 600
+      padding: 14px 10px 14px 20px
+
+/* socialiconstyle 1 */
+.social-icons-style1
+  list-style: none
+  margin-bottom: 0
+
+  li
+    &:last-child
+      margin-right: 0
+
+    display: inline-block
+    margin-right: 10px
+    transition-duration: .5s
+    text-align: center
+
+    a
+      color: rgba(225, 225, 225, 0.7)
+
+      i
+        width: 45px
+        height: 45px
+        line-height: 43px
+        border: 2px rgba(225, 225, 225, 0.1) solid
+        border-radius: 50px
+        font-size: 15px
+
+    &:hover a
+      i
+        background-color: $PrimaryColor
+        border-color: $PrimaryColor
+        transition-duration: .5s
+
+      color: #fff
+
+/* socialiconstyle 2 */
+.social-icons-style2
+  margin: 0
+  padding: 0
+
+  li
+    display: inline-block
+    margin-right: 1px
+    margin-bottom: 0
+
+    &:last-child
+      margin-right: 0
+
+    a
+      font-size: 14px
+      height: 35px
+      line-height: 36px
+      width: 35px
+      background: #f5f5f5
+      color: rgba(0, 0, 0, 0.65)
+      border-radius: 3px
+      display: inline-block
+      text-align: center
+
+      &:hover
+        background: $PrimaryColor
+        color: #fff
+
+/* button style */
+.butn
+  background-color: $PrimaryColor
+  border: none
+  color: #fff
+  text-align: center
+  border-radius: 3px
+  padding: 16px 30px
+  line-height: normal
+  text-transform: uppercase
+  font-weight: 600
+  font-size: 14px
+  position: relative
+  z-index: 9999
+  display: inline-block
+  letter-spacing: 1px
+  white-space: nowrap
+  transition: all .4s ease-in-out 0s
+  cursor: pointer
+
+  span
+    z-index: 9
+    position: relative
+
+  &:hover, &:focus, &:active
+    background: #1e2022
+    color: #fff
+  
+  &.white
+    background-color: #fff
+    color: $PrimaryColor
+
+  &.light
+    background: rgba($PrimaryRgbColor, 0.1)
+    color: $PrimaryColor
+
+    &:hover, &:active, &:focus
+      background: $PrimaryColor
+      color: #fff
+
+  &.primary-hover:hover, &.white.primary-hover:hover
+  background: $PrimaryColor
+  color: #fff      
+
+  &.dark
+    background: #1e2022
+    color: #fff
+
+    &:hover, &:active, &:focus
+      background: $PrimaryColor
+      color: #fff
+
+  &.gray
+    background: #f0f0f0
+    color: #666
+
+    &:hover, &:active, &:focus
+      background: $PrimaryColor
+      color: #fff
+
+  &.white-hover:hover, &.white-hover:active, &.white-hover:focus
+    background: #fff
+    color: #232323
+
+  &.small
+    padding: 8px 20px
+
+  &.medium
+    padding: 12px 24px
+
+@media screen and (max-width: $desk-xs-screen)
+  .butn
+    padding: 14px 28px
+
+    &.medium
+      padding: 10px 22px
+
+    &.small
+      padding: 8px 18px
+
+/*==============================
+ *    Section titles
+ *    ================================ */
+.section-title
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+    margin-bottom: 0
+
+  span
+    text-transform: uppercase
+    letter-spacing: 3px
+    position: relative
+    color: $PrimaryColor
+    font-size: 13px
+    font-weight: 600
+    display: block
+    margin-bottom: 8px
+
+    &:before
+      content: ''
+      width: 30px
+      height: 1px
+      background: $PrimaryColor
+      display: inline-block
+      vertical-align: middle
+      margin-right: 10px                  
+
+/* white  */
+.section-title.white
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+    color: #fff
+
+  span
+    color: #fff
+
+    &:before
+      background: #fff
+
+/*==============================
+ *    Navigation
+ *    ================================ */
+.navbar-nav li
+  &.current > a, &.active > a
+    color: $PrimaryColor
+
+.navbar > ul > li.current > a:after
+  border-color: transparent $PrimaryColor $PrimaryColor transparent
+
+.menu_area-light
+  .navbar-nav li
+    &.current > a, &.active > a
+      color: $PrimaryColor
+
+  .navbar > ul > li.current > a:after
+    border-color: transparent $PrimaryColor $PrimaryColor transparent
+
+  &.scrollHeader
+    .navbar-nav li
+      &.current > a, &.active > a, &.current > a:hover
+        color: $PrimaryColor
+
+    .navbar > ul > li.current > a:after
+      border-color: transparent $PrimaryColor $PrimaryColor transparent
+
+/* header style 3 */
+.header-style3
+  .navbar-nav li.current > a
+    color: $PrimaryColor
+
+  .navbar > ul > li.current > a:after
+    border-color: transparent #73c12c #73c12c transparent
+
+  &.scrollHeader
+    .navbar-nav li.current > a
+      color: $PrimaryColor
+
+      &:hover
+        color: $PrimaryColor
+
+    .navbar > ul > li.current > a:after
+      border-color: transparent $PrimaryColor $PrimaryColor transparent
+
+@media screen and (min-width: $desk-sm-screen)
+  .header-style1, .menu_area-light
+    .navbar-nav li.current > a
+      color: $PrimaryColor
+
+    .navbar > ul > li.current > a:after
+      border-color: transparent $PrimaryColor $PrimaryColor transparent
+
+    &.scrollHeader
+      .navbar-nav li.current > a
+        color: $PrimaryColor
+
+        &:hover
+          color: $PrimaryColor
+
+      .navbar > ul > li.current > a:after
+        border-color: transparent $PrimaryColor $PrimaryColor transparent    
+
+/*==============================
+ *    Main Banner
+ *    ================================ */
+/* slider fade */
+.slider-fade
+  .owl-item
+    height: 100vh
+    position: relative
+
+  .item
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-size: cover
+    background-position: center center
+
+    .caption
+      width: 100%
+      z-index: 9
+
+  .owl-theme .owl-dots
+    position: absolute
+    bottom: 12vh
+    width: 100%
+    left: 0
+
+  .owl-carousel .caption
+    .overflow-hidden
+      display: inline-block
+
+    h1
+      animation-delay: 0.8s
+      font-size: 4.5rem
+      margin-bottom: 1rem
+
+    p
+      word-spacing: 2px
+      animation-delay: 1.2s
+      margin-bottom: 30px
+      color: #1e2022
+
+    span
+      display: inline-block
+
+    .butn
+      animation-delay: 1.4s
+
+  .owl-theme .owl-dots .owl-dot
+    span
+      background: rgba(255, 255, 255, 1)
+
+    &.active span, &:hover span
+      background: $PrimaryColor
+
+@media screen and (max-width: $desk-md-screen)
+  .slider-fade .owl-carousel .caption h1
+    font-size: 3.5rem
+
+@media screen and (max-width: $desk-xs-screen)
+  .slider-fade .owl-carousel .caption
+    h1
+      font-size: 3rem
+
+    p
+      font-size: 1.2rem
+
+@media screen and (max-width: $tablet-xs-screen)
+  .slider-fade .owl-carousel .caption
+    h1
+      font-size: 2.6rem
+
+    p
+      font-size: 1rem
+
+@media screen and (max-width: $mobile-sm-screen)
+  .slider-fade .owl-carousel .caption h1
+    font-size: 2rem
+
+@media screen and (max-width: $mobile-xs-screen)
+  .slider-fade .owl-carousel .caption h1
+    font-size: 1.8rem
+
+/* slider-fade1 */
+.slider-fade1
+  .owl-item
+    height: 100vh
+    position: relative
+
+  .text-center h1
+    margin-left: auto
+    margin-right: auto
+
+  .text-right h1
+    margin-right: 0
+    margin-left: auto
+
+  .item
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-size: cover
+    background-position: center center
+
+    .caption
+      width: 100%
+      z-index: 9
+
+  .owl-carousel .caption
+    .overflow-hidden
+      display: inline-block
+
+    h3
+      font-weight: 200
+      animation-delay: 0.5s
+      position: relative
+      display: inline-block
+      position: relative
+
+      &:before
+        content: ""
+        width: 50px
+        height: 1px
+        background: $PrimaryColor
+        display: inline-block
+        vertical-align: middle
+        margin-right: 10px
+
+    h1
+      animation-delay: 0.8s
+      font-size: 4rem
+
+    p
+      color: #eee
+      word-spacing: 2px
+      animation-delay: 1.2s
+      margin-bottom: 30px
+
+    span
+      display: inline-block
+
+    .butn
+      animation-delay: 1.4s
+
+  .owl-theme
+    .owl-dots
+      position: absolute
+      bottom: 5vh
+      width: 100%
+      left: 0
+
+      .owl-dot
+        span
+          background: rgba(255, 255, 255, 1)
+
+        &.active span, &:hover span
+          background: $PrimaryColor
+
+    .owl-nav
+      margin-top: 0
+
+  .owl-nav
+    i, span
+      font-weight: 600
+      color: #fff
+      transition-duration: 500ms
+      font-size: 20px
+
+  .owl-theme .owl-nav
+    [class*='owl-']
+      position: absolute
+      right: inherit
+      top: 0
+      bottom: 0
+      width: 60px
+      height: 60px
+      border: none
+      background: rgba(255, 255, 255, 0.5)
+      border-radius: 60px
+      line-height: 65px
+      transition-duration: 500ms
+      left: 5vh
+      text-align: center
+      margin: auto
+      opacity: 0.3
+
+    .owl-next
+      top: 0
+      bottom: 0
+      left: inherit
+      right: 5vh
+
+      &:hover
+        opacity: 1
+        background: $PrimaryColor
+
+    .owl-prev:hover
+      opacity: 1
+      background: $PrimaryColor
+
+  .owl-nav
+    .owl-next:hover i, .owl-prev:hover i
+      color: #fff
+
+@media screen and (max-width: $desk-md-screen)
+  .slider-fade1 .owl-carousel .caption h1
+    font-size: 3.5rem
+
+@media screen and (max-width: $desk-xs-screen)
+  .slider-fade1 .owl-carousel .caption h1
+    font-size: 3rem
+
+@media screen and (max-width: $tablet-xs-screen)
+  .slider-fade1 .owl-carousel .caption
+    h1
+      font-size: 2.6rem
+
+    h3
+      font-size: 1rem
+
+@media screen and (max-width: $mobile-sm-screen)
+  .slider-fade1 .owl-carousel .caption h1
+    font-size: 2rem
+
+@media screen and (max-width: $mobile-xs-screen)
+  .slider-fade1 .owl-carousel .caption h1
+    font-size: 1.8rem
+
+/* banner-section1 */
+.banner-section1
+  padding: 15% 0 12% 0
+
+@media screen and (max-width: $desk-md-screen)
+  .banner-section1
+    padding: 18% 0 15% 0
+
+@media screen and (max-width: $desk-xs-screen)
+  .banner-section1
+    padding: 20% 0 15% 0
+
+@media screen and (max-width: $tablet-xs-screen)
+  .banner-section1
+    padding: 22% 0 15% 0
+
+@media screen and (max-width: $mobile-sm-screen)
+  .banner-section1
+    padding: 35% 0 15% 0    
+
+/*==============================
+ *    Cards
+ *    ================================ */
+/* card-style1 */
+.card-style1
+  border: none
+  padding: 25px
+  border-radius: 4px
+
+  i
+    font-size: 32px
+    display: inline-block
+
+  a
+    font-weight: 600
+
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5
+    margin-bottom: 20px
+    display: block
+
+@media screen and (max-width: $desk-md-screen)
+  .card-style1
+    padding: 20px
+
+/* card style2 */
+.card-style2
+  border: none
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.06)
+  margin: 2rem
+
+  .card-body
+    padding: 3rem
+
+  .card-img, .card-img-top
+    border-top-right-radius: 0
+
+  .card-img, .card-img-bottom
+    border-bottom-right-radius: 0
+
+  .card-img.even, .card-img-top.even
+    border-top-right-radius: calc(.25rem - 1px)
+    border-top-left-radius: 0
+
+  .card-img.even, .card-img-bottom.even
+    border-bottom-right-radius: calc(.25rem - 1px)
+    border-bottom-left-radius: 0
+
+@media screen and (max-width: $desk-md-screen)
+  .card-style2 .card-body
+    padding: 2.5rem
+
+@media screen and (max-width: $tablet-xs-screen)
+  .card-style2
+    margin: 1.5rem
+
+    .card-body
+      padding: 2rem
+
+    .card-img
+      min-height: 350px
+      border-top-left-radius: calc(.25rem - 1px)
+      border-top-right-radius: calc(.25rem - 1px)
+
+    .card-img-top
+      border-top-left-radius: calc(.25rem - 1px)
+      border-top-right-radius: calc(.25rem - 1px)
+
+    .card-img, .card-img-bottom
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+
+    .card-img.even, .card-img-top.even, .card-img.even, .card-img-bottom.even
+      border-top-right-radius: calc(.25rem - 1px)
+      border-top-left-radius: calc(.25rem - 1px)
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+
+@media screen and (max-width: $mobile-sm-screen)
+  .card-style2
+    margin: 1.2rem
+
+    .card-img
+      min-height: 275px
+
+/* card-style3 */
+.card-style3:hover
+  border-left-color: $PrimaryColor
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+
+  .butn
+    background: $PrimaryColor
+    color: #fff
+
+/* card-style4 */
+.card-style4
+  transition: 0.3s
+  border-color: rgba(0, 0, 0, 0.075)
+  height: 100%
+
+/* card-style5 */
+.card-style5
+  position: relative
+  transition: all .3s ease
+  overflow: hidden
+
+  &:before
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    background: rgba(0, 0, 0, 0.65)
+    background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.65) 116%)
+    background: linear-gradient(-180deg, transparent, rgba(0, 0, 0, 0.65) 116%)
+    z-index: 1
+    width: 100%
+    height: 100%
+    border-radius: 4px
+
+  .card-img img
+    border-radius: 0.25rem
+    transition: all .3s ease
+
+  h3, .h3
+    line-height: normal
+    font-weight: 400
+    margin-bottom: 1.5rem
+
+  .card-body a
+    color: #fff
+
+    &:hover
+      color: rgba(255, 255, 255, 0.85)
+
+  &:hover .card-img img
+    -webkit-transform: scale(1.1)
+    transform: scale(1.1)
+
+  .date
+    position: absolute
+    left: 15px
+    top: 15px
+    background: $PrimaryColor
+    color: #fff
+    padding: 5px 12px
+    text-align: center
+    border-radius: 0.25rem
+    max-width: 60px
+    font-size: 18px
+    font-weight: 700
+
+  .card-body
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    z-index: 9
+
+/* card-style6 */
+.card-style6 .card-body
+  margin-top: -45px
+  background: #fff
+  box-shadow: 0px 10px 30px 0px rgba(17, 12, 79, 0.1)
+  z-index: 99
+  position: relative
+  width: 85%
+
+/* card-style7 */  
+.card-style7
+  height: 100%
+  border: none
+  border-radius: 0
+
+  .card-body
+    position: relative
+    width: 90%
+    margin: -20px auto 0
+    padding: 30px
+    background-color: #fff
+    transition: margin .3s ease
+
+    .counter
+      position: absolute
+      right: 20px
+      top: -43px
+      color: $PrimaryColor
+      font-size: 48px
+      font-weight: 800
+      letter-spacing: .2px
+
+/* card-style8 */
+.card-style8
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
+  position: relative
+  overflow: hidden
+  transition: all 0.7s ease-in
+  height: 100%
+
+  .card-body
+    position: relative
+
+  h3
+    line-height: normal
+    font-weight: 500
+
+  .card-butn
+    display: block
+    position: absolute
+    top: -29px
+    right: 20px
+    width: 55px
+    line-height: 55px
+    height: 55px
+    text-align: center
+    border-radius: 50%
+    background-color: $PrimaryColor
+    color: #fff
+    z-index: 2
+    box-shadow: 0 5px 25px -4px rgba(9, 31, 67, 0.15)
+    transform: translateY(25px)
+    opacity: 0
+    visibility: hidden
+    transition: all 0.5s ease-in-out
+    -webkit-transition: all 0.5s ease-in-out
+
+    &:hover
+      background-color: #fff
+      color: $PrimaryColor
+
+  &:hover .card-butn
+    transform: translateY(0)
+    opacity: 1
+    visibility: visible
+
+/* card-style9 */
+.card-style9
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1)
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+  padding: 30px 35px 30px 35px
+
+/* card-style10 */
+.card-style10
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1)
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+
+  .card-body
+    padding: 2.2rem 2rem
+
+  .icon
+    font-size: 24px
+    width: 60px
+    height: 60px
+    line-height: 63px
+    text-align: center
+    color: #73c12c
+    background-color: rgba($PrimaryRgbColor, 0.1)
+    border-radius: 50px
+
+  &:hover
+    background: $PrimaryColor
+
+    h3, p
+      color: #fff
+
+    .icon
+      background: #fff
+
+/* card-style11 */
+.card-style11
+  border: none
+  position: relative
+
+  .card-img
+    border-radius: 0.25rem
+
+    img
+      border-radius: 0.25rem
+
+  h3, h4, h5, h6
+    line-height: normal
+
+  .date
+    position: absolute
+    left: 15px
+    top: 15px
+    background: $PrimaryColor
+    color: #fff
+    padding: 5px 12px
+    text-align: center
+    border-radius: 0.25rem
+    max-width: 70px
+    font-size: 18px
+    font-weight: 700
+
+  .card-body a
+    color: #fff
+
+    &:hover
+      color: $PrimaryColor
+
+  &:before
+    position: absolute
+    content: ""
+    top: 0
+    left: 0
+    background: rgba(0, 0, 0, 0.76)
+    background: -webkit-linear-gradient(top, transparent, #000 116%)
+    background: linear-gradient(-180deg, transparent, #000 116%)
+    z-index: 0
+    width: 100%
+    height: 100%
+    border-radius: 0.25rem
+
+  .card-body
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 30px 35px 40px
+    width: 100%
+
+@media screen and (max-width: $desk-md-screen)
+  .card-style11
+    .card-body
+      padding: 30px 25px 30px
+
+    h3, h4, h5, h6
+      line-height: 28px
+
+@media screen and (max-width: $desk-xs-screen)
+  .card-style11 .card-body
+    padding: 25px
+
+/*==============================
+ *    Portfolio
+ *    ================================ */
+
+/* masonry portfolio */
+.masonry
+  column-gap: 10px
+  transition-duration: .4s
+  -moz-column-count: 3
+  -webkit-column-count: 3
+  column-count: 3
+
+  a
+    display: block
+    margin-top: 10px
+
+    &:first-child
+      margin-top: 0
+
+.masonry-item
+  position: relative
+  overflow: hidden
+  transition-duration: .4s
+
+  img
+    display: block
+    width: 100%
+    height: auto
+    transition-duration: .4s
+
+.masonry-item-overlay
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  height: 100%
+  max-height: 100%
+  width: 100%
+  opacity: 0
+  background-color: #212529
+  padding: 15px
+  transition-duration: .4s
+
+  &.one
+    background-color: #bad08e
+
+  &.two
+    background-color: #d6d101
+
+  &.three
+    background-color: #9bd0c6
+
+  &.four
+    background-color: #c7c095
+
+  &.five
+    background-color: #ffb901
+
+  &.six
+    background-color: #f38550
+
+  &.seven
+    background-color: #efb7b6
+
+  &.eight
+    background-color: #90c0ca
+
+  h4
+    color: #fff
+    font-size: 20px
+    font-weight: 400
+    position: absolute
+    bottom: 40px
+    margin: 0 0 20px 0
+    transition-duration: .5s
+
+  ul
+    position: absolute
+    padding-left: 0
+    bottom: 25px
+    margin: 0
+    transition-duration: .6s
+
+    li
+      list-style-type: none
+      display: inline-block
+      font-size: 16px
+      color: #fff
+      padding-left: 0
+      opacity: .7
+
+      &:last-child:after
+        content: none
+
+      &:after
+        content: ' / '
+        font-size: 8px
+        font-weight: 700
+        margin: 0 5px
+
+      a
+        color: #fff
+
+.masonry-item
+  &:hover .masonry-item-overlay
+    position: absolute
+    opacity: 1
+    transition-duration: .5s
+
+    h4, ul
+      opacity: 1
+      transform: translate(0, -50%)
+
+  &:first-child
+    margin-top: 0
+
+@media screen and (max-width: $desk-xs-screen)
+  .masonry
+    -moz-column-count: 2
+    -webkit-column-count: 2
+    column-count: 2
+
+@media screen and (max-width: $mobile-sm-screen)
+  .masonry
+    -moz-column-count: 1
+    -webkit-column-count: 1
+    column-count: 1
+
+/* portfolio style1 */
+.portfolio-style1
+  display: block
+  position: relative
+  transition-duration: .3s
+
+  .portfolio-img img
+    display: block
+    width: 100%
+    height: auto
+
+  .portfolio-overlay
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    position: absolute
+    background: rgba(0, 0, 0, 0.65)
+    overflow: hidden
+    top: 0px
+    left: 0px
+    right: 0px
+    bottom: 0px
+    opacity: 0
+    -webkit-transition-duration: .3s
+    transition-duration: .3s
+
+  &:hover .portfolio-overlay
+    opacity: 1
+
+  .portfolio-overlay h4 a
+    opacity: 0
+    transition-duration: .3s
+    color: #fff
+
+    &:hover
+      color: $PrimaryColor
+
+  &:hover h4 a
+    opacity: 1
+
+  .portfolio-overlay p
+    font-size: 15px
+    color: #fff
+    transition-duration: .3s
+    margin: 0
+    opacity: 0
+
+  &:hover p
+    opacity: 1
+
+/*==============================
+ *    Video
+ *    ================================ */
+.story-video
+  height: 100%
+
+.video_btn
+  position: relative
+  height: 80px
+  width: 80px
+  background: $PrimaryColor
+  text-align: center
+  display: inline-block
+  line-height: 80px
+  color: #fff
+  border-radius: 50%
+  transition-duration: 0s
+  -ms-transition-duration: 0s
+  -moz-transition-duration: 0s
+  -webkit-transition-duration: 0s
+  -o-transition-duration: 0s
+
+  &:hover i, &:focus i
+    color: #fff
+
+  &:after
+    content: ""
+    position: absolute
+    left: 50%
+    top: 50%
+    height: 80px
+    width: 80px
+    border: 2px solid #fff
+    border-radius: 50%
+    transform: translate(-50%, -50%)
+    -moz-transform: translateX(-50%) translateY(-50%)
+    -webkit-transform: translateX(-50%) translateY(-50%)
+    -ms-transform: translateX(-50%) translateY(-50%)
+    -o-transform: translateX(-50%) translateY(-50%)
+    transform: translateX(-50%) translateY(-50%)
+    opacity: .3
+    animation: pulse-border 1500ms ease-out infinite
+
+  &:before
+    content: ""
+    position: absolute
+    left: 50%
+    top: 50%
+    height: 95px
+    width: 95px
+    border: 2px solid #fff
+    border-radius: 50%
+    transform: translate(-50%, -50%)
+    -moz-transform: translateX(-50%) translateY(-50%)
+    -webkit-transform: translateX(-50%) translateY(-50%)
+    -ms-transform: translateX(-50%) translateY(-50%)
+    -o-transform: translateX(-50%) translateY(-50%)
+    transform: translateX(-50%) translateY(-50%)
+    opacity: .3
+    animation: pulse-border 1500ms ease-out infinite
+
+  &.small
+    width: 50px
+    height: 50px
+    line-height: 50px
+
+    &:after
+      height: 50px
+      width: 50px
+
+    &:before
+      height: 65px
+      width: 65px
+
+@keyframes pulse-border
+  0%
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1)
+    opacity: 1
+
+  100%
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5)
+    opacity: 0
+
+@media screen and (max-width: $desk-md-screen)
+  .video_btn
+    height: 75px
+    width: 75px
+    line-height: 75px
+
+    &:after
+      height: 75px
+      width: 75px
+
+    &:before
+      height: 90px
+      width: 90px
+
+@media screen and (max-width: $desk-xs-screen)
+  .video_btn
+    height: 70px
+    width: 70px
+    line-height: 70px
+
+    &:after
+      height: 70px
+      width: 70px
+
+    &:before
+      height: 85px
+      width: 85px
+
+  @keyframes pulse-border
+    0%
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1)
+
+    100%
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.2)
+
+@media screen and (max-width: $tablet-xs-screen)
+  .video_btn
+    height: 60px
+    width: 60px
+    line-height: 60px
+
+    &:after
+      height: 60px
+      width: 60px
+
+    &:before
+      height: 75px
+      width: 75px 
+
+/*==============================
+ *    OwlCarousel
+ *    ================================ */
+.owl-theme
+  .owl-nav.disabled + .owl-dots
+    margin-top: 40px
+
+  .owl-dots .owl-dot
+    span
+      background: rgba(0, 0, 0, 0.15)
+
+    &.active span, &:hover span
+      background: $PrimaryColor
+
+.owl-carousel .owl-item img
+  display: inline-block
+  width: auto
+
+.dots-white.owl-theme .owl-dots .owl-dot
+  span
+    background: rgba(255, 255, 255, 0.5)
+
+  &.active span, &:hover span
+    background: #fff
+
+/*==============================
+ *    Testmonials
+ *    ================================ */
+/* testimonial-style1 */
+.testimonial-style1 .testimonial-block
+  position: relative
+  background: #fff
+  box-shadow: 0px 12px 15px rgba(140, 152, 164, 0.1)
+
+  &:after
+    content: ""
+    display: block
+    width: 14px
+    top: calc(100% - 7px)
+    height: 14px
+    background-color: #fff
+    position: absolute
+    -webkit-transform: scaleX(0.75) rotate(45deg)
+    -ms-transform: scaleX(0.75) rotate(45deg)
+    transform: scaleX(0.75) rotate(45deg)
+    border-width: 0
+    -webkit-box-sizing: content-box
+    box-sizing: content-box
+
+/* testimonial-style2 */
+.testimonial-style2
+  overflow: visible !important
+
+  .testimonial-details
+    background: #fff
+    margin-left: -100px
+    box-shadow: -5px 0px 30px 0px rgba(214, 215, 216, 0.57)
+
+@media screen and (max-width: $desk-xl-screen)
+  .testimonial-style2 .testimonial-details
+    margin-left: -10%
+
+@media screen and (max-width: $desk-md-screen)
+  .testimonial-style2 .testimonial-details
+    background: rgba(255, 255, 255, 0.9)
+    margin-left: 0
+
+/* testimonial-style3 */
+.testimonial-style3
+  p
+    font-size: 24px
+    margin-bottom: 4rem
+    letter-spacing: 0.5px
+    line-height: 1.9
+
+  h4
+    font-size: 18px
+    margin-bottom: 0
+
+  small
+    color: $PrimaryColor
+
+  .quote
+    font-size: 48px
+    margin-bottom: 2rem
+    color: $PrimaryColor
+    display: block
+
+@media screen and (max-width: $desk-xs-screen)
+  .testimonial-style3 p
+    font-size: 20px
+
+@media screen and (max-width: $tablet-xs-screen)
+  .testimonial-style3 p
+    font-size: 18px
+
+@media screen and (max-width: $mobile-sm-screen)
+  .testimonial-style3
+    .quote
+      font-size: 42px
+
+    p
+      margin-bottom: 3rem
+      font-size: 16px
+
+/* testimonial-style4 */
+.testimonial-style4
+  position: relative
+  overflow: visible
+
+/* testimonial-style6 */
+.testimonial-style6 .testimonial-block
+  position: relative
+  box-shadow: 0 0 3px rgba(22, 28, 45, 0.15) !important
+
+  &:before
+    content: ""
+    position: absolute
+    bottom: -3px
+    left: 10px
+    margin-left: 13px
+    box-sizing: border-box
+    border: 8px solid #3c4858
+    border-color: transparent #ffffff #ffffff transparent
+    transform-origin: 0 0
+    transform: rotate(45deg)
+    box-shadow: 2px 2px 2px -1px rgba(60, 72, 88, 0.15)
+
+/*==============================
+ *    Team styles
+ *    ================================ */
+/* team-style1 */
+.team-style1
+  overflow: hidden
+  border-radius: 4px
+  position: relative
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+  .team-img
+    display: block
+    position: relative
+    z-index: 1
+
+    &:after
+      background: linear-gradient(180deg, transparent 0, #000)
+      position: absolute
+      left: 0
+      right: 0
+      width: 100%
+      height: 100%
+      content: ""
+      z-index: 1
+      opacity: 0
+
+  .content
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    padding: 35px 40px
+    z-index: 2
+
+    h5
+      color: #fff
+      margin: 0 0 10px 0
+      opacity: 0
+      font-size: 20px
+      visibility: hidden
+      transition-delay: .85s
+      transform: translateY(10px)
+      transition: all 0.85s cubic-bezier(0.23, 0.88, 0.34, 0.99)
+
+    p
+      color: rgba(255, 255, 255, 0.65)
+      font-size: 14px
+      margin-bottom: 15px
+      opacity: 0
+      visibility: hidden
+      transition: all 0.65s cubic-bezier(0.23, 0.88, 0.34, 0.99)
+      transform: translateY(10px)
+
+  ul.social-icon
+    margin-bottom: 0
+
+    li
+      margin: 0 10px
+      display: inline-block
+      -webkit-transform: translateY(8px) scale(0.8)
+      transform: translateY(8px) scale(0.8)
+      opacity: 0
+      visibility: hidden
+      -webkit-transition: all 0.45s cubic-bezier(0.23, 0.88, 0.34, 0.99)
+      transition: all 0.45s cubic-bezier(0.23, 0.88, 0.34, 0.99)
+
+      a
+        -webkit-transition: .3s
+        transition: .3s
+        color: #fff
+        font-size: 15px
+
+        &:hover
+          color: rgba(255, 255, 255, 0.65)
+
+  &:hover
+    .team-img:after
+      opacity: .85
+      top: 0
+
+    .content
+      opacity: 1
+      visibility: visible
+
+      h5, p
+        opacity: 1
+        visibility: visible
+        -webkit-transform: translateY(0)
+        transform: translateY(0)
+
+      h5
+        -webkit-transition-delay: .25s
+        transition-delay: .25s
+
+      p
+        -webkit-transition-delay: .33s
+        transition-delay: .33s
+
+    ul.social-icon li
+      opacity: 1
+      visibility: visible
+      -webkit-transform: translateY(0)
+      transform: translateY(0)
+
+      &:first-child
+        -webkit-transition-delay: .07692s
+        transition-delay: .07692s
+
+      &:nth-child(2)
+        -webkit-transition-delay: .15385s
+        transition-delay: .15385s
+
+      &:nth-child(3)
+        -webkit-transition-delay: .23077s
+        transition-delay: .23077s          
+
+/*==============================
+ *    Others
+ *    ================================ */
+
+/* section title */
+.section-title-style1
+  h2, h3
+    padding-bottom: 15px
+    position: relative
+
+  h2:after, h3:after
+    content: ''
+    width: 80px
+    height: 1px
+    background: $PrimaryColor
+    background: linear-gradient(to right, transparent, $PrimaryColor, transparent)
+    position: absolute
+    bottom: 0
+    left: calc(50% - 40px)
+
+  &.left
+    h2:after, h3:after
+      left: 0
+
+/* page title */
+.page-title-section
+  padding: 200px 0 150px
+  text-align: center
+
+  h1
+    font-size: 40px
+    font-weight: 600
+    letter-spacing: 1px
+    line-height: 1
+    color: #fff
+    margin-bottom: 0
+
+  ul
+    margin-bottom: 0
+    margin-top: 15px
+    text-align: center
+
+    li
+      display: inline-block
+
+      &:last-child a
+        color: $PrimaryColor
+
+      &:after
+        content: '\f105'
+        font-weight: 700
+        vertical-align: middle
+        color: #fff
+        font-family: Font Awesome\ 5 Free
+        padding: 0 5px 0 10px
+
+      &:last-child:after
+        content: none
+
+      a
+        color: #fff
+        font-size: 14px
+        font-weight: 500
+
+  .active a, li.active:last-child a
+    color: #fff
+
+@media screen and (max-width: $desk-md-screen)
+  .page-title-section
+    padding: 200px 0 100px
+
+    h1
+      font-size: 36px
+      line-height: 42px
+
+@media screen and (max-width: $desk-xs-screen)
+  .page-title-section
+    padding: 148px 0 75px
+
+    h1
+      margin-bottom: 10px
+      font-size: 30px
+      line-height: 40px
+
+    ul
+      margin-top: 5px
+
+/* category-box */
+.category-box
+  background-color: #f8f9fa
+  border: 1px solid rgba(0, 0, 0, 0.035)
+  border-radius: 3px
+  padding: 35px 15px
+  text-align: center
+  transition: .4s
+  vertical-align: top
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  overflow: hidden
+  height: 100%
+
+  i
+    font-size: 34px
+    transition: .4s
+    color: $PrimaryColor
+    display: inline-block
+    margin-bottom: 15px
+
+  h4
+    transition: .4s
+    font-weight: 400
+
+  span
+    font-size: 13px
+    border-radius: 3px
+    transition: .4s
+    display: inline-block
+
+  &:hover
+    background-color: $PrimaryColor
+    background-color: $PrimaryColor
+
+    i, h4, span
+      color: #fff
+
+/* icon box */
+.icon-box
+  width: 80px
+  height: 80px
+  border: 1px solid #eee
+  line-height: 80px
+  text-align: center
+  border-radius: 4px
+
+  img
+    max-width: 40px
+    vertical-align: middle
+
+/* job search */
+.job-search
+  .form-control
+    padding: 2rem .75rem 2rem .5rem
+    border: none
+    font-size: 1.1rem
+    box-shadow: none
+
+  .first .form-control
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+
+  .last
+    .input-group
+      margin-left: -2px
+      border-left: 1px solid rgba(0, 0, 0, 0.075)
+
+    .form-control
+      border-radius: 0
+
+  .input-group > .input-group-prepend > .input-group-text
+    color: #575a7b
+    border: none
+    background: #fff
+    padding: .375rem .5rem .375rem 1.35rem
+    font-size: 1.3rem
+
+  .last .input-group > .input-group-prepend > .input-group-text
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+
+  .butn
+    padding: 1.5rem 30px 1.4rem 30px
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    margin-left: -3px
+
+.trending-keywords
+  list-style: none
+  margin-top: 1rem
+  margin-bottom: 0
+
+  .title
+    color: #fff
+    font-weight: 600
+
+    &:after
+      content: none
+
+  li
+    display: inline-block
+    position: relative
+    margin-right: 8px
+    margin-top: 3px
+
+    &:after
+      content: ','
+      display: inline-block
+      color: #fff
+
+    &:last-child:after
+      content: none
+
+    a
+      color: rgba(255, 255, 255, 0.85)
+
+@media screen and (max-width: $desk-xs-screen)
+  .job-search
+    .form-control
+      padding: 1.8rem .75rem 1.8rem .5rem
+
+    .butn
+      padding: 1.3rem 30px 1.2rem 30px
+
+@media screen and (max-width: $tablet-xs-screen)
+  .job-search
+    .first .form-control
+      border-top-right-radius: .25rem
+      border-bottom-right-radius: .25rem
+
+    .last .input-group
+      border-left: none
+      margin-left: 0
+
+    .form-control
+      padding: 1.6rem .75rem 1.6rem .5rem
+
+    .last
+      .form-control
+        border-top-right-radius: .25rem
+        border-bottom-right-radius: .25rem
+
+      .input-group > .input-group-prepend > .input-group-text
+        border-top-left-radius: .25rem
+        border-bottom-left-radius: .25rem
+
+    .butn
+      margin-left: 0
+      border-radius: .25rem
+      padding: 1rem 30px 1rem 30px
+
+  .trending-keywords
+    text-align: center
+
+/* accordion */
+.accordion-style
+  .card
+    background: transparent
+    box-shadow: none
+    margin-top: 0 !important
+    border: none
+
+  .card-header
+    border: 0px
+    padding: 0
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+    background: none
+
+  .btn-link
+    background: $PrimaryColor !important
+    color: #fff
+    font-size: 14px
+    line-height: 20px
+    position: relative
+    border: none
+    display: block
+    width: 100%
+    text-align: left
+    white-space: normal
+    border-radius: 4px
+    padding: 15px 30px 15px 15px
+    box-shadow: none
+    text-decoration: none
+
+    &:hover
+      background: $PrimaryColor !important
+      border: none
+      text-decoration: none
+
+    &.collapsed:after
+      background: none
+      content: "+"
+      right: 15px
+      left: inherit
+      font-size: 20px
+      height: auto
+      transform: none
+      width: auto
+      top: 15px
+
+    &:after
+      background: none
+      content: "-"
+      right: 17px
+      left: inherit
+      font-size: 20px
+      height: auto
+      transform: none
+      width: auto
+      top: 13px
+      position: absolute
+      color: #fff
+
+  .card-body
+    padding: 20px
+    text-align: left
+
+/* app buttons */
+.app-btn
+  border: 1px solid rgba(255, 255, 255, 0.9)
+  max-width: 170px
+
+  .media i
+    font-size: 20px
+
+  .media-body span
+    font-size: 12px
+
+/* custom checkbox */
+.custom-control-input:checked ~ .custom-control-label:before
+  color: #fff
+  border-color: $PrimaryColor
+  background-color: $PrimaryColor
+
+/* transparent icon */
+.transparent-icon .icon
+  width: 90px
+  height: 90px
+  line-height: 90px
+  background-color: rgba(225, 225, 225, 0.2)
+  border-radius: 0.25rem
+  text-align: center
+
+/* tags */
+.tags a
+  border: 1px solid rgba(0, 0, 0, 0.1)
+  border-radius: 3px
+  padding: 5px 10px
+  font-size: 14px
+  line-height: 20px
+  margin: 0.6rem 10px 0 0
+  display: inline-block
+
+  &:hover
+    border-color: $PrimaryColor
+    background: $PrimaryColor
+    color: #fff
+
+/* about block */
+.about-block
+  position: relative
+
+  .about-img-2
+    position: absolute
+    right: 50px
+    bottom: -50px
+
+@media screen and (max-width: $desk-md-screen)
+  .about-block .about-img-2
+    right: 0
+
+@media screen and (max-width: $desk-xs-screen)
+  .about-block .about-img-2
+    right: -20px
+
+@media screen and (max-width: $mobile-sm-screen)
+  .about-block .about-img-2
+    right: 0
+    width: 50%
+
+/* video block */
+.video-block
+  position: relative
+
+  .video-img1
+    position: absolute
+    left: 11.3%
+    top: -20px
+
+  .video-img2
+    position: absolute
+    left: 3%
+    bottom: 50px
+
+  .video-img3
+    position: absolute
+    right: 8%
+    top: 40px
+
+  .video-img4
+    position: absolute
+    right: 4%
+    bottom: -20px
+
+  .img-video
+    position: absolute
+    top: 45%
+    left: 0
+    right: 0
+
+@media screen and (max-width: $tablet-xs-screen)
+  .video-block
+    .video-img1, .video-img2, .video-img3, .video-img4
+      display: none
+
+/* process */
+.process
+  .process-no
+    font-size: 100px
+    opacity: .1
+    position: absolute
+    line-height: 1
+    left: 0
+    top: -30px
+    right: 0
+    font-weight: 800
+
+  .process-icon
+    position: relative
+
+  &.line:before
+    content: '------------'
+    position: absolute
+    font-size: 1.2em
+    display: block
+    left: -55%
+    color: $PrimaryColor
+    top: 25%
+    text-align: right
+    transform: translateX(50%) translateY(-50%)
+    -webkit-transform: translateX(50%) translateY(-50%)
+    t-ms-ransform: translateX(50%) translateY(-50%)
+    transform: translateX(50%) translateY(-50%)
+
+@media screen and (max-width: $desk-xs-screen)
+  .process.line:before
+    content: none
+
+/* widgets */
+.widget
+  margin-bottom: 2.5rem
+
+  &:last-child
+    margin-bottom: 0
+
+/* rotate animation */
+.animation-rotate
+  position: absolute
+  bottom: 15%
+  right: 10%
+  width: 16px
+  height: 16px
+  border-radius: 16px
+  background: #e5a9ff
+  -webkit-animation: rotate3d 10s linear infinite
+  -moz-animation: rotate3d 10s linear infinite
+  -o-animation: rotate3d 10s linear infinite
+  animation: rotate3d 10s linear infinite
+
+@keyframes rotate3d
+  0%
+    -webkit-transform: rotateY(0deg)
+    -moz-transform: rotateY(0deg)
+    -ms-transform: rotateY(0deg)
+    -o-transform: rotateY(0deg)
+    transform: rotateY(0deg)
+
+  100%
+    -webkit-transform: rotateY(360deg)
+    -moz-transform: rotateY(360deg)
+    -ms-transform: rotateY(360deg)
+    -o-transform: rotateY(360deg)
+    transform: rotateY(360deg)
+
+.animation-square-rotate
+  position: absolute
+  width: 20px
+  height: 20px
+  border: 2px solid #a3eead
+  bottom: 42%
+  left: 6%
+  animation: animationFramesTwo 25s infinite linear
+
+@keyframes animationFramesTwo
+  0%
+    transform: translate(0px, 0px) rotate(0deg) scale(1)
+
+  20%
+    transform: translate(73px, -1px) rotate(36deg) scale(0.9)
+
+  40%
+    transform: translate(141px, 72px) rotate(72deg) scale(1)
+
+  60%
+    transform: translate(83px, 122px) rotate(108deg) scale(1.2)
+
+  80%
+    transform: translate(-40px, 72px) rotate(144deg) scale(1.1)
+
+  100%
+    transform: translate(0px, 0px) rotate(0deg) scale(1)
+
+@-webkit-keyframes animationFramesTwo
+  0%
+    -webkit-transform: translate(0px, 0px) rotate(0deg) scale(1)
+
+  20%
+    -webkit-transform: translate(73px, -1px) rotate(36deg) scale(0.9)
+
+  40%
+    -webkit-transform: translate(141px, 72px) rotate(72deg) scale(1)
+
+  60%
+    -webkit-transform: translate(83px, 122px) rotate(108deg) scale(1.2)
+
+  80%
+    -webkit-transform: translate(-40px, 72px) rotate(144deg) scale(1.1)
+
+  100%
+    -webkit-transform: translate(0px, 0px) rotate(0deg) scale(1)
+
+/*==============================
+ *    Blog styles
+ *    ================================ */
+/* blog-card1 */
+.blog-card1
+  border: 1px solid rgba(0, 0, 0, 0.09)
+  height: 100%
+
+  .date
+    position: absolute
+    top: 15px
+    left: 15px
+    width: 76px
+    height: 76px
+    background: rgba(255, 255, 255, 0.9)
+    text-align: center
+    z-index: 101
+    color: #282b2d
+    padding: 12px 0
+    border-radius: 3px
+
+  .month
+    display: block
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 600
+    line-height: normal
+    letter-spacing: .167em
+
+  .day
+    display: block
+    font-size: 30px
+    font-weight: 700
+    line-height: normal
+
+  .card-img
+    overflow: hidden
+    -webkit-border-radius: 3px
+    -webkit-border-bottom-right-radius: 0
+    -webkit-border-bottom-left-radius: 0
+    -moz-border-radius: 3px
+    -moz-border-radius-bottomright: 0
+    -moz-border-radius-bottomleft: 0
+    border-radius: 3px
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 0
+
+    img
+      -webkit-border-top-left-radius: 3px
+      -webkit-border-top-right-radius: 3px
+      -moz-border-radius-topleft: 3px
+      -moz-border-radius-topright: 3px
+      border-top-left-radius: 3px
+      border-top-right-radius: 3px
+      backface-visibility: hidden
+      -webkit-transition: .6s
+      -moz-transition: .6s
+      transition: .6s
+
+    &:hover img
+      -webkit-transform: scale(1.04)
+      -moz-transform: scale(1.04)
+      transform: scale(1.04)
+
+  .card-body
+    padding: 2rem
+
+    h3
+      margin-bottom: 20px
+      line-height: 24px
+
+      a
+        font-size: 18px
+        line-height: 24px
+        color: #232323
+
+        &:hover
+          color: $PrimaryColor
+
+  .category
+    margin-bottom: 5px
+    display: block
+
+    a
+      color: $PrimaryColor
+      font-size: 14px
+      letter-spacing: 0.5px
+      font-weight: 600
+
+      &:hover
+        color: #232323
+
+  .read-more
+    font-weight: 600
+
+/*==============================
+ *    Contact info
+ *    ================================ */
+.map
+  height: 400px
+  width: 100%
+  vertical-align: top
+  border: 0
+
+/* banner form */
+.banner-form
+  .banner-form-spacer
+    position: relative
+    padding: 20px 20px 60px 20px
+    background: #fff
+
+  .buttons-set
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: 0
+    padding: 0
+
+  .quform-loading-wrap
+    margin: 0 0 30px 0
+
+  .butn
+    &.btn-block
+      padding: 18px 30px
+      border-radius: 0
+
+    &:hover:after
+      border-radius: 0
+
+/* quform */
+.form-control:focus
+  border-color: $PrimaryColor
+
+.quform-input
+  position: relative
+
+.quform-element > label
+  font-weight: normal
+  padding-bottom: 5px
+  margin-bottom: 0
+  color: #6a747b
+
+  .quform-required
+    color: #cc0101
+    font-size: 10px
+
+.quform-inner input
+  width: 100%
+
+.quform-elements .quform-element
+  textarea
+    margin-bottom: 0
+    padding: 8px 15px
+    vertical-align: top
+
+  select
+    margin-bottom: 0
+    padding: 8px 15px
+
+.quform-errors
+  padding: 0
+  margin: 0
+  line-height: normal
+
+  > .quform-error
+    padding: 0
+    background: none
+    border: none
+    float: none
+    color: #f5543f
+    font-size: 11px
+    line-height: normal
+    letter-spacing: normal
+
+.quform-outer-no-js .quform-error
+  padding: 0
+  background: none
+  border: none
+  float: none
+  color: #f5543f
+  font-size: 11px
+  line-height: normal
+  letter-spacing: normal
+
+.quform-has-error
+  input, textarea, select, input[type=file], .custom-file-label
+    border-color: #f5543f
+
+.quform-success-message, .quform-outer-no-js .quform-success-message
+  padding: 0.75rem 1.25rem 0.75rem 3rem
+
+.quform-input .quform-errors-wrap
+  position: absolute
+  right: 8px
+  top: 0
+  line-height: normal
+  z-index: 1
+
+.quform-submit-inner
+  float: none
+
+.quform-loading-wrap
+  float: none
+
+  .quform-loading
+    display: inline-block
+
+.light-validation .quform-errors > .quform-error
+  color: #fff
+
+/* newsletter */
+.newsletter-form
+  .quform-elements
+    position: relative
+
+  .quform-submit-inner
+    position: absolute
+    right: 16px
+    top: -49px
+    width: auto
+    background: #f5f5f5
+    height: 48px
+    border-left: 1px solid rgba(0, 0, 0, 0.05)
+    -webkit-border-top-right-radius: 0.25em
+    -webkit-border-bottom-right-radius: 0.25em
+    -moz-border-radius-topright: 0.25em
+    -moz-border-radius-bottomright: 0.25em
+    border-top-right-radius: 0.25em
+    border-bottom-right-radius: 0.25em
+
+  .quform-loading-wrap
+    margin-top: 15px
+    margin-bottom: 0
+    margin-left: 0
+
+  input
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    height: 50px
+    padding: 0.5rem 4rem 0.5rem 1rem
+
+  .quform-has-error
+    input, textarea, select
+      border-color: #f5543f
+
+  .quform-input .quform-errors-wrap
+    right: 15px
+
+  i
+    font-size: 1.2rem
+    line-height: 2rem
+
+/*==============================
+ *    Footer
+ *    ================================ */
+footer
+  background: #1e2022
+  word-break: break-word
+
+/* footer-style1 */
+.footer-style1
+  > .container
+    padding-top: 90px
+    padding-bottom: 90px
+
+  h3
+    color: #fff
+    font-size: 18px
+    font-weight: 600
+    margin-bottom: 25px
+    line-height: 1
+    position: relative
+
+    &:after
+      content: none
+
+  .footer-bar
+    padding-top: 20px
+    padding-bottom: 20px
+    margin-top: 0
+    background: #1e2022
+    border-top: 1px solid rgba(255, 255, 255, 0.075)
+    color: rgba(255, 255, 255, 0.85)
+
+    p
+      margin-top: 5px
+      margin-bottom: 0
+
+  ul
+    margin-bottom: 0
+
+  li
+    margin-bottom: 10px
+    list-style: none
+
+    &:last-child
+      margin-bottom: 0
+
+    a
+      color: rgba(255, 255, 255, 0.85)
+
+      &:hover
+        color: $PrimaryColor
+
+  .social-icons
+    ul
+      margin: 0
+      padding: 0
+
+    li
+      display: inline-block
+      margin-right: 1px
+      margin-bottom: 0
+
+      &:last-child
+        margin-right: 0
+
+      a
+        font-size: 14px
+        height: 35px
+        line-height: 36px
+        width: 35px
+        background: #f5f5f5
+        color: rgba(0, 0, 0, 0.65)
+        border-radius: 3px
+        display: inline-block
+        text-align: center
+
+        &:hover
+          background: $PrimaryColor
+          color: #fff
+
+@media screen and (max-width: $desk-md-screen)
+  .footer-style1 > .container
+    padding-top: 70px
+    padding-bottom: 70px
+
+@media screen and (max-width: $tablet-xs-screen)
+  .footer-style1
+    > .container
+      padding-top: 50px
+      padding-bottom: 50px
+
+    h3
+      margin-bottom: 20px  
+
+/* footer-style2 */
+.footer-style2
+  > .container
+    padding-top: 90px
+    padding-bottom: 90px
+
+  h3
+    color: #fff
+    font-size: 18px
+    font-weight: 600
+    margin-bottom: 25px
+    line-height: 1
+    position: relative
+
+.footer-style1 h3:after
+  content: none
+
+.footer-style2
+  .footer-top-bar
+    border-bottom: 1px solid rgba(255, 255, 255, 1)
+    padding-top: 40px
+    padding-bottom: 40px
+
+  .footer-bar
+    padding-top: 20px
+    padding-bottom: 20px
+    margin-top: 0
+    background: transparent
+    border-top: 1px solid rgba(255, 255, 255, 1)
+    color: rgba(255, 255, 255, 0.85)
+
+    p
+      margin-top: 5px
+      margin-bottom: 0
+
+  ul
+    margin-bottom: 0
+
+  li
+    margin-bottom: 10px
+    list-style: none
+    color: rgba(255, 255, 255, 0.9)
+
+    &:last-child
+      margin-bottom: 0
+
+    a
+      color: rgba(255, 255, 255, 0.9)
+
+      &:hover
+        color: #fff
+
+  .social-icons
+    ul
+      margin: 0
+      padding: 0
+
+    li
+      display: inline-block
+      margin-right: 1px
+      margin-bottom: 0
+
+      &:last-child
+        margin-right: 0
+
+      a
+        font-size: 14px
+        height: 35px
+        line-height: 36px
+        width: 35px
+        background: #f5f5f5
+        color: rgba(0, 0, 0, 0.65)
+        border-radius: 3px
+        display: inline-block
+        text-align: center
+
+        &:hover
+          background: #282b2d
+          color: #fff
+
+@media screen and (max-width: $desk-md-screen)
+  .footer-style2 > .container
+    padding-top: 70px
+    padding-bottom: 70px
+
+@media screen and (max-width: $tablet-xs-screen)
+  .footer-style2
+    > .container
+      padding-top: 50px
+      padding-bottom: 50px
+
+    h3
+      margin-bottom: 20px      

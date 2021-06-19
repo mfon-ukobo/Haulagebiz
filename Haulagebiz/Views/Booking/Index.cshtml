@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "About Us";
+    var pageheaderModel = new PageHeaderViewModel
+    {
+        Title = "Booking",
+        ImageUrl = "/images/hero_bg_2.jpg",
+        BreadCrumb = new string[]
+        {
+            "Booking"
+        }
+    };
+}
+
+<partial name="_PageHeader"
+         model="pageheaderModel" />
+
